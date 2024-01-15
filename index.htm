@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>portfolio</title>
   </head>
   <body bgcolor="beige">
@@ -17,14 +18,17 @@
     </header>
     <section id="about">
       <h1>about :</h1>
-      <img
-        src="images/IMG_20230524_153953_395.jpg"
-        alt="photo de profil"
-        style="width: 600px; height: 600px"
-      />
+      <h1>this is me</h1>
+      <div>
+        <img
+          src="images/IMG_20230524_153953_395.jpg"
+          alt="photo de profil"
+          style="width: 600px; height: 600px"
+        />
+      </div>
     </section>
     <section id="work">
-      <h1>work :</h1>
+      <h1>About my work :</h1>
       <p>
         I am an automatic engineer with a passion for designing and implementing
         automated systems. Throughout my career, I have been dedicated to
@@ -38,6 +42,15 @@
     </section>
     <section id="resume">
       <h1>resume :</h1>
+      <form>
+        <iframe
+          src="CV.pdf"
+          frameborder="0"
+          width="100%"
+          height="600px"
+        ></iframe>
+      </form>
+      <p>you can check my resume here</p>
       <a href="CV.pdf" target="_blank">
         <button>
           <h4>CV</h4>
@@ -48,6 +61,7 @@
       <h1>contact :</h1>
       <h2>let's work together</h2>
       <form>
+        <h1>let me know you</h1>
         <label for="name">name :</label>
         <input type="text" id="name" name="name" required />
         <br />
@@ -57,6 +71,15 @@
         <label for="message">Message : </label>
         <textarea name="message" id="message" cols="30" rows="10"></textarea>
         <input type="submit" value="Submit" />
+      </form>
+
+      <form>
+        <h1>My phone</h1>
+        <p>54609427</p>
+      </form>
+      <form>
+        <h1>Email</h1>
+        <a href="mailto:touaitimazen@example.com?">touaitimazen@gmail.com</a>
       </form>
     </section>
     <footer><h1>by mazen</h1></footer>
