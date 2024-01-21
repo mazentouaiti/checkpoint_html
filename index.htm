@@ -15,10 +15,17 @@
         <a href="#resume">resume</a>
         <a href="#contact">contact</a>
       </nav>
+      <select name="menu" id="menu" onchange="window.location.href=this.value">
+        <option value="http://127.0.0.1:5501/checkpoint%20html/index.htm#home">
+          home
+        </option>
+        <option value="https://www.w3schools.com/">w3schools</option>
+      </select>
+      <button id="modeToggleBtn"></button>
     </header>
-    <section id="about">
-      <h1>about :</h1>
-      <h1>this is me</h1>
+    <secton id="about">
+      <h1>This is me</h1>
+
       <div>
         <img
           src="images/IMG_20230524_153953_395.jpg"
@@ -26,7 +33,7 @@
           style="width: 600px; height: 600px"
         />
       </div>
-    </section>
+    </secton>
     <section id="work">
       <h1>About my work :</h1>
       <p>
@@ -50,12 +57,6 @@
           height="600px"
         ></iframe>
       </form>
-      <p>you can check my resume here</p>
-      <a href="CV.pdf" target="_blank">
-        <button>
-          <h4>CV</h4>
-        </button>
-      </a>
     </section>
     <section id="contact">
       <h1>contact :</h1>
@@ -83,5 +84,6 @@
       </form>
     </section>
     <footer><h1>by mazen</h1></footer>
+    <script src="func.js"></script>
   </body>
 </html>

@@ -1,50 +1,82 @@
+:root {
+  --beige: beige;
+  --black: black;
+  --white: white;
+  --blacks: rgba(0, 0, 0, 0.1);
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 11px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: beige;
+  background-color: var(--beige);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(0, 0, 0);
-  border-radius: 50px;
+  background: var(--black);
 }
 body {
   font-family: "Roboto", sans-serif;
-  background-color: beige;
+  background-color: var(--beige);
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: #000000;
+  background-color: var(--black);
   padding: 10px;
-}
+  display: flex;
+  justify-content: space-between;
 
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+button {
+  color: var(--white);
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 2rem;
+  width: 80%;
 }
 
 nav a {
   text-decoration: none;
-  color: beige;
+  color: var(--beige);
   font-size: 18px;
 }
 
 nav a:hover {
-  color: #ecf0f1;
+  color: var(--white);
 }
-
+select {
+  background-color: var(--black);
+  color: var(--beige);
+  border: var(--black) solid;
+  width: 100px;
+}
+option {
+  background-color: var(--black);
+  color: var(--beige);
+}
 section {
   padding: 20px;
+  width: 100%;
+  min-height: 100vh;
 }
 
 section h1 {
-  color: #000000;
+  color: var(--black);
 }
 div {
   display: flex;
@@ -58,7 +90,7 @@ img {
   height: auto;
   border: 1px solid;
   border-radius: 5px;
-  box-shadow: 0 0 10px #000000;
+  box-shadow: 0 0 10px var(--black);
   transition: 0.7s ease;
 }
 
@@ -66,23 +98,13 @@ p {
   line-height: 1.6;
 }
 
-button {
-  background-color: #000000;
-  color: #fff;
-  padding: 10px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
 form {
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
-  background-color: beige;
+  background-color: var(--beige);
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px var(--blacks);
 }
 
 label {
@@ -99,15 +121,81 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #000000;
-  color: #fff;
+  background-color: var(--black);
+  color: var(--white);
   cursor: pointer;
 }
 
 footer {
   text-align: center;
   margin-top: 20px;
-  background-color: #000000;
-  color: #fff;
+  background-color: var(--black);
+  color: var(--white);
   padding: 10px;
+}
+body.dark-mode {
+  background-color: var(--black);
+  color: var(--beige);
+}
+
+body.dark-mode header {
+  background-color: var(--blacks);
+}
+
+body.dark-mode button {
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+body.dark-mode nav a {
+  color: var(--beige);
+}
+
+body.dark-mode select {
+  background-color: var(--blacks);
+  color: var(--beige);
+  border: var(--blacks) solid;
+}
+
+body.dark-mode option {
+  background-color: var(--blacks);
+  color: var(--beige);
+}
+
+body.dark-mode section {
+  background-color: var(--black);
+}
+
+body.dark-mode section h1 {
+  color: var(--beige);
+}
+
+body.dark-mode img {
+  box-shadow: 0 0 10px var(--white);
+}
+
+body.dark-mode form {
+  background-color: var(--blacks);
+  box-shadow: 0 0 10px var(--black);
+}
+
+body.dark-mode label {
+  color: var(--white);
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: var(--blacks);
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+body.dark-mode input[type="submit"] {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+body.dark-mode footer {
+  background-color: var(--blacks);
+  color: var(--white);
 }
